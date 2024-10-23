@@ -1,0 +1,281 @@
+/* Reset css */
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0;
+    scroll-behavior: smooth;
+    scroll-margin-top: 80px;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+/* Header CSS */
+header{
+    border-bottom: 1px solid green;
+    background-color: black;
+}
+
+.headerContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 40px;
+}
+
+.logo img{
+    border-radius: 50%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.headerContent nav{
+    margin-right: 40px;
+}
+
+.headerContent nav ul{
+    display: flex;
+}
+
+.headerContent nav ul li{
+    margin: 20px 20px 10px 10px;
+}
+
+.headerContent a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+.headerContent a.active{
+    color: green;
+}
+
+.headerContent a:hover{
+    color: green;
+}
+
+main{
+    margin-top: 120px;
+}
+
+/* Main CSS */
+main section{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 160px;
+}
+
+.homeContent{
+    display: flex;
+    justify-content: center;
+}
+
+.homeText{
+    margin-top: 120px;
+    margin-right: 20px;
+}
+
+.homeText h1{
+    font-size: 28px;
+}
+
+.homeText h1 span{
+    color: green;
+}
+
+.homeText p{
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+#contactMeButton{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(81, 178, 223);
+    background-color: rgb(81, 178, 223);
+    border-radius: 10px;
+    display: inline;
+}
+
+#iconContact{
+    height: 20px;
+}
+
+#imgHome{
+    border-radius: 50%;
+    height: 300px;
+}
+
+.titleSection{
+    font-size: 30px;
+}
+
+.titleSection span{
+    color: green;
+}
+
+.aboutContent{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#aboutTitle{
+    margin-top: 140px;
+}
+
+#aboutButtons{
+    margin-bottom: 60px;
+}
+
+.textAbout{
+    margin-top: 20px;
+    max-width: 650px;
+}
+
+.textAbout p{
+    font-size: 22px;
+}
+
+/* Projetos */
+#cardProject{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: black;
+    cursor: pointer;
+}
+
+#cardProject:hover{
+    background-color: rgb(39, 39, 39);
+}
+
+#cardProject img{
+    width: 300px;
+    margin-left: 50px;
+}
+
+/* Habilidades */
+#skillsCard{
+    margin-top: 40px;
+    background-color: black;
+}
+
+#skillIcon{
+    height: 22px;
+    margin-right: 10px;
+}
+
+/* Contato */
+#textContact{
+    margin-top: 20px;
+    width: auto;
+    min-width: 150px;
+    max-width: 600px;
+    margin-right: 50px;
+}
+
+#textContact p{
+    font-size: 22px;
+}
+
+#cardContacts{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    width: 350px;
+}
+
+#cardContacts h5{
+    text-align: center;
+}
+
+#cardContacts ul{
+    display: table;
+    margin: 0;
+    padding: 0;
+}
+
+#cardContacts a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#cardContacts p{
+    display: inline;
+}
+
+/* Footer */
+
+footer{
+    border-top: 1px solid #006400;
+    margin-top: 30px;
+    background-color: black;
+}
+
+#footerContent{
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#copyright p{
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+#iconMedia{
+    height: 50px;
+    width: 50px;
+}
+
+#modalCredits{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+/* Back to top */
+.backToTop {
+    outline: none;
+    border: 0;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+  
+.backToTop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.backToTop img {
+    width: 100%;
+    transform: rotate(180deg);
+}

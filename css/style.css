@@ -6,7 +6,7 @@
     list-style:none;
     border:0;
     scroll-behavior: smooth;
-    scroll-margin-top: 80px;
+    scroll-margin-top: 120px;
 }
 
 body{
@@ -217,6 +217,14 @@ main section{
     display: inline;
 }
 
+#contactItem{
+    cursor: pointer;
+}
+
+#contactItem:hover{
+    background-color: rgb(39, 39, 39);
+}
+
 /* Footer */
 
 footer{
@@ -278,4 +286,24 @@ footer{
 .backToTop img {
     width: 100%;
     transform: rotate(180deg);
+}
+
+section{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    } to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@media screen (max-width: 1073px){
+    
 }

@@ -306,6 +306,12 @@ section{
     }
 }
 
+@media screen and (min-width: 865px) {
+    #about{
+        margin-top: 140px;
+    }
+}
+
 @media screen and (max-width: 865px) {
     .homeContent{
         display: flex;

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LucasFigueiredoDEV - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scroll.css">
+    <link rel="shortcut icon" href="storage/img/foto-ia.jpg" type="image/x-icon">
+    <style>
+        .language-selector {
+            margin: 20px;
+            margin-top: 0px;
+            font-weight: bold;
+            display: flex;
+        }
+
+        #iconLang{
+            width: 20px;
+            height: 20px;
+        }
+
+        .symbol {
+            font-size: 40px;
+            font-family: 'Courier New', monospace;
+            transition: color 0.8s ease; /* Animação suave de transição */
+            padding-bottom: 30px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="cursor: pointer;">
+                <div class="symbol" id="codeSymbol"> &lt;/&gt; </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about" id="navAbout">Sobre</a></li>
+                <li><a href="#projects" id="navProjects">Projetos</a></li>
+                <li><a href="#contact" id="navContact">Contato</a></li>
+                <div class="language-selector">
+                    <label for="language" id="labelLang">Idioma:</label>
+                    <select id="language" class="form form-select ms-2" style="cursor: pointer;" onchange="changeLanguage()">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" id="menuIcon">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><div class="symbol" id="codeSymbol2"> &lt;/&gt; </div></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#home"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about"><b id="navAbout2">Sobre</b></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#projects"><b id="navProjects2">Projetos</b></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact"><b id="navContact2">Contato</b></a>
+                    </li>
+                    <div class="language-selector2" style="margin-left: 0px; margin-top: 20px;">
+                        <label for="language2"><b id="labelLang2">Idioma:</b></label>
+                        <select id="language2" class="form form-select ms-2" style="cursor: pointer;" onchange="changeLanguage1()">
+                            <option value="pt">Português</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+
+                    <script>
+                        function changeLanguage1() {
+                            const language = document.getElementById('language2').value;
+
+                            // Atualiza os textos com base no idioma selecionado
+                            document.getElementById('navAbout').innerText = translations[language].navAbout;
+                            document.getElementById('navAbout2').textContent = translations[language].navAbout;
+                            document.getElementById('navProjects').innerText = translations[language].navProjects;
+                            document.getElementById('navProjects2').textContent = translations[language].navProjects;
+                            document.getElementById('navContact').innerText = translations[language].navContact;
+                            document.getElementById('navContact2').textContent = translations[language].navContact;
+                            document.getElementById('labelLang').innerText = translations[language].labelLang;
+                            document.getElementById('labelLang2').textContent = translations[language].labelLang;
+                            document.getElementById('title').innerText = translations[language].title;
+                            document.getElementById('description').innerText = translations[language].description;
+                            document.getElementById('titleAbout').innerText = translations[language].titleAbout;
+                            document.getElementById('p1About').innerText = translations[language].p1About;
+                            document.getElementById('p2About').innerText = translations[language].p2About;
+                            document.getElementById('viewCV').innerText = translations[language].viewCV;
+                            document.getElementById('projectTitle').innerText = translations[language].projectTitle;
+                            document.getElementById('selectionProcessTitle').innerText = translations[language].selectionProcessTitle;
+                            document.getElementById('websiteHcpTitle').innerText = translations[language].websiteHcpTitle;
+                            document.getElementById('transparencyHcpTitle').innerText = translations[language].transparencyHcpTitle;
+                            document.getElementById('descriptionAllMyLinks').innerText = translations[language].descriptionAllMyLinks;
+                            document.getElementById('processoSeletivoDescription').innerText = translations[language].processoSeletivoDescription;
+                            document.getElementById('siteHcpDescription').innerText = translations[language].siteHcpDescription;
+                            document.getElementById('portalTransparenciaDescription').innerText = translations[language].portalTransparenciaDescription;
+                            document.getElementById('contactTitle').innerText = translations[language].contactTitle;
+                            document.getElementById('contactText').innerText = translations[language].contactText;
+                            document.getElementById('copyRight').innerText = translations[language].copyRight;
+                            document.getElementById('exampleModalLabel1').textContent = translations[language].exampleModalLabel1;
+                            document.getElementById('exampleModalLabel2').textContent = translations[language].exampleModalLabel2;
+                            document.getElementById('exampleModalLabel3').textContent = translations[language].exampleModalLabel3;
+                            document.getElementById('exampleModalLabel4').textContent = translations[language].exampleModalLabel4;
+                            document.getElementById('detailedDescription').textContent = translations[language].detailedDescription;
+                            document.getElementById('detailedDescriptionText').textContent = translations[language].detailedDescriptionText;
+                            document.getElementById('detailedDescription2Text').textContent = translations[language].detailedDescription2Text;
+                            document.getElementById('detailedDescription3Text').textContent = translations[language].detailedDescription3Text;
+                            document.getElementById('detailedDescription4Text').textContent = translations[language].detailedDescription4Text;
+                            document.getElementById('detailedDescription2').textContent = translations[language].detailedDescription;
+                            document.getElementById('detailedDescription3').textContent = translations[language].detailedDescription;
+                            document.getElementById('detailedDescription4').textContent = translations[language].detailedDescription;
+                            document.getElementById('mainTech').textContent = translations[language].mainTech;
+                            document.getElementById('mainTech2').textContent = translations[language].mainTech;
+                            document.getElementById('mainTech3').textContent = translations[language].mainTech;
+                            document.getElementById('mainTech4').textContent = translations[language].mainTech;
+                            document.getElementById('auxDev').textContent = translations[language].auxDev;
+                            document.getElementById('auxDev2').textContent = translations[language].auxDev;
+                            document.getElementById('auxDev3').textContent = translations[language].auxDev;
+                            document.getElementById('p1m1').textContent = translations[language].p1m1;
+                            document.getElementById('p2m1').textContent = translations[language].p2m1;
+                            document.getElementById('p3m1').textContent = translations[language].p3m1;
+                            document.getElementById('p4m1').textContent = translations[language].p4m1;
+                            document.getElementById('p5m1').textContent = translations[language].p5m1;
+                            document.getElementById('p6m1').textContent = translations[language].p6m1;
+                            document.getElementById('p7m1').textContent = translations[language].p7m1;
+                            document.getElementById('p1m2').textContent = translations[language].p1m2;
+                            document.getElementById('p2m2').textContent = translations[language].p2m2;
+                            document.getElementById('p3m2').textContent = translations[language].p3m2;
+                            document.getElementById('p4m2').textContent = translations[language].p4m2;
+                            document.getElementById('p5m2').textContent = translations[language].p5m2;
+                            document.getElementById('p1m3').textContent = translations[language].p1m3;
+                            document.getElementById('p2m3').textContent = translations[language].p2m3;
+                            document.getElementById('projeto1Details').textContent = translations[language].projeto1Details;
+                            document.getElementById('codeMyLinks').textContent = translations[language].codeMyLinks;
+                            document.getElementById('visitMyLinks').textContent = translations[language].visitMyLinks;
+                            document.getElementById('visitMyLinks1').textContent = translations[language].visitMyLinks;
+                            document.getElementById('visitMyLinks2').textContent = translations[language].visitMyLinks;
+                            document.getElementById('visitMyLinks3').textContent = translations[language].visitMyLinks;
+                            document.getElementById('projeto2Details').textContent = translations[language].projeto1Details;
+                            document.getElementById('projeto3Details').textContent = translations[language].projeto1Details;
+                            document.getElementById('projeto4Details').textContent = translations[language].projeto1Details;
+                            document.getElementById('creditsAnchor').innerText = translations[language].creditsAnchor;
+                            document.getElementById('exampleModalLabel').textContent = translations[language].credits;
+
+                            // Alterar a linguagem do atributo "lang" na tag HTML
+                            document.documentElement.lang = language;
+                        }
+                    </script>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="storage/img/foto-ia.jpg" id="profileImg" alt="Profile image">
+        <h1 id="title">Lucas é um Desenvolvedor Full Stack.</h1>
+        <p><i id="description">/* Ele cria sites funcionais e responsivos */</i></p>
+        <div class="wrapper">
+            <div class="item item1">
+                <img src="storage/icons/html-5.png" id="iconSkill" alt="HTML Icon">
+            </div>
+            <div class="item item2">
+                <img src="storage/icons/css-3.png" id="iconSkill" alt="CSS Icon">
+            </div>
+            <div class="item item3">
+                <img src="storage/icons/python.png" id="iconSkill" alt="Python Icon">
+            </div>
+            <div class="item item4">
+                <img src="storage/icons/django.png" id="iconSkill2" alt="Django Icon">
+            </div>
+            <div class="item item5">
+                <img src="storage/icons/atom.png" id="iconSkill" alt="React Icon">
+            </div>
+            <div class="item item6">
+                <img src="storage/icons/js.png" id="iconSkill" alt="JavaScript Icon">
+            </div>
+            <div class="item item7">
+                <img src="storage/icons/laravel.png" id="iconSkill" alt="Laravel Icon">
+            </div>
+            <div class="item item8">
+                <img src="storage/icons/mysql.png" id="iconSkill" alt="MySQL Icon">
+            </div>
+            <div class="item item9">
+                <img src="storage/icons/php.png" id="iconSkill2" alt="PHP Icon">
+            </div>
+            <div class="item item10">
+                <img src="storage/icons/bootstrap.png" id="iconSkill" alt="Bootstrap Icon">
+            </div>
+            <div class="item item11">
+                <img src="storage/icons/nodejs.png" id="iconSkill" alt="NodeJS Icon">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 id="titleAbout">Sobre Mim</h2>
+        <div id="AboutText">
+            <p id="p1About" style="font-size: 20px;">
+                Eu sou um Desenvolvedor Full stack Brasileiro.
+                Posso desenvolver sites responsivos do zero e elevá-los a experiências web modernas e amigáveis.
+            </p>
+            <p id="p2About" style="font-size: 20px;">
+                Transformar minha criatividade e conhecimento no desenvolvimento de sites e sistemas tem sido minha paixão por mais de um ano.
+                Tenho auxiliado na manutenção e desenvolvimento de sistemas para hospitais por cerca de um ano.
+                Sempre me esforço para aprender sobre as mais novas tecnologias e frameworks, pois aprender é a minha maior paixão.
+            </p>
+        </div>
+        <div class="d-flex" id="aboutButtons">
+            <div class="m-auto">
+                <a href="https://discord.com/users/333462800989028352" class="btn btn-secondary mt-3" target="_blank"><b>Discord</b> <i class="bi bi-discord"></i></a>
+                <a href="https://www.linkedin.com/in/lucas-figueiredo-aab260264/" class="btn btn-secondary mt-3" target="_blank"><b>Linkedin</b> <i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/LucasFigueiredoDEV" class="btn btn-secondary mt-3" target="_blank"><b>Github</b> <i class="bi bi-github"></i></a>
+                <a href="storage/cv.pdf" class="btn btn-secondary mt-3" target="_blank"><b id="viewCV">Visualizar CV</b><i class="bi bi-box-arrow-in-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 id="projectTitle">Projetos</h2>
+            <div class="project-list">
+                <div class="project">
+                    <img src="storage/projects/processo-seletivo-hcp.png" alt="Projeto 1">
+                    <h3 id="selectionProcessTitle">Processo Seletivo HCP Gestão</h3>
+                    <p id="processoSeletivoDescription">Página Web onde são realizadas todas os processos seletivos das unidades HCP.</p>
+                    <a href="" data-bs-toggle="modal" id="modalCredits" data-bs-target="#projeto1"><span id="projeto1Details">Ver mais</span> <i class="bi bi-box-arrow-in-up-right"></i></a>
+
+                    <div class="modal fade" id="projeto1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel1">Projeto - Processo Seletivo HCP</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="d-flex">
+                                        <div class="m-auto">
+
+                                            <div class="card p-2">
+                                                <h3 id="detailedDescription">Descrição Detalhada:</h3>
+                                                <p class="text-start"><b id="detailedDescriptionText">Este projeto consiste em uma página web onde são realizadas todos os processos seletivos das unidades HCP Gestão.</b></p>
+                                                <h4 class="text-start mt-4" id="mainTech">Principais Tecnologias:</h4>
+                                                <table class="table border">
+                                                    <tr>
+                                                        <td colspan="4">Laravel Framework</td>
+                                                        <td><img src="storage/icons/laravel.png" alt="Laravel Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">Bootstrap Framework</td>
+                                                        <td><img src="storage/icons/bootstrap.png" alt="Bootstrap Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">PHP</td>
+                                                        <td><img src="storage/icons/php.png" alt="PHP Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">JavaScript</td>
+                                                        <td><img src="storage/icons/js.png" alt="JavaScript Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+                                                </table>
+                                                <h4 class="text-start mt-4" id="auxDev">Neste Projeto auxiliei no desenvolvimento:</h4>
+                                                <p class="text-start"><b id="p1m1">1 - Lobby de Realização de provas.</b></p>
+                                                <p class="text-start"><b id="p2m1">2 - Autenticação de Logins.</b></p>
+                                                <p class="text-start"><b id="p3m1">3 - APIs de comunicação via E-mail.</b></p>
+                                                <p class="text-start"><b id="p4m1">4 - Cálculo para geração de rankings.</b></p>
+                                                <p class="text-start"><b id="p5m1">5 - Validação de etapas de referente ao processo seletivo.</b></p>
+                                                <p class="text-start"><b id="p6m1">6 - Aba para cadastro de Processos Seletivos.</b></p>
+                                                <p class="text-start"><b id="p7m1">7 - Aba para cadastro de Pergunta, Respostas e Tempo de prova referente a cada Processo Seletivo.</b></p>
+                                            </div>
+                                            <a href="https://hcpgestao.org.br/processo_seletivo_hcpgestao/public/" target="_blank" class="btn btn-secondary mt-4 text-white"><span id="visitMyLinks1">Visitar</span> <i class="bi bi-box-arrow-in-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="storage/projects/portal-transparencia.png" alt="Projeto 2">
+                    <h3 id="transparencyHcpTitle">Portal da Transparência - HCP Gestão</h3>
+                    <p id="portalTransparenciaDescription">Página web onde são encontradas todas as informações referentes às unidades HCP.</p>
+                    <a href="" data-bs-toggle="modal" id="modalCredits" data-bs-target="#projeto2"><span id="projeto2Details">Ver mais</span> <i class="bi bi-box-arrow-in-up-right"></i></a>
+
+                    <div class="modal fade" id="projeto2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel2">Projeto - Portal da Transparência HCP</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="d-flex">
+                                        <div class="m-auto">
+
+                                            <div class="card p-2">
+                                                <h3 id="detailedDescription2">Descrição Detalhada:</h3>
+                                                <p class="text-start"><b id="detailedDescription2Text">Este projeto consiste em uma Página web onde são encontradas todas as informações referentes às unidades HCP.</b></p>
+                                                <h4 class="text-start mt-4" id="mainTech2">Principais Tecnologias:</h4>
+                                                <table class="table border">
+                                                    <tr>
+                                                        <td colspan="4">Laravel Framework</td>
+                                                        <td><img src="storage/icons/laravel.png" alt="Laravel Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">Bootstrap Framework</td>
+                                                        <td><img src="storage/icons/bootstrap.png" alt="Bootstrap Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">PHP</td>
+                                                        <td><img src="storage/icons/php.png" alt="PHP Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">JavaScript</td>
+                                                        <td><img src="storage/icons/js.png" alt="JavaScript Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+                                                </table>
+                                                <h4 class="text-start mt-4" id="auxDev2">Neste Projeto auxiliei no desenvolvimento:</h4>
+                                                <p class="text-start"><b id="p1m2">1 - Atualização de código para versão PHP mais recentes.</b></p>
+                                                <p class="text-start"><b id="p2m2">2 - Autenticação de Login de Usuários.</b></p>
+                                                <p class="text-start"><b id="p3m2">3 - Alteração de Layouts e Estilização de Páginas.</b></p>
+                                                <p class="text-start"><b id="p4m2">4 - Permissões de Usuários.</b></p>
+                                                <p class="text-start"><b id="p5m2">5 - Cadastro de Contratações.</b></p>
+                                            </div>
+                                            <a href="https://hcpgestao-portal.hcpgestao.org.br/" target="_blank" class="btn btn-secondary mt-4 text-white"><span id="visitMyLinks2">Visitar</span> <i class="bi bi-box-arrow-in-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="storage/projects/site-hcp.png" alt="Projeto 3">
+                    <h3 id="websiteHcpTitle">Site HCP Gestão</h3>
+                    <p id="siteHcpDescription">Página web do HCP (Hospital de Câncer de Pernambuco).</p>
+                    <a href="" data-bs-toggle="modal" id="modalCredits" data-bs-target="#projeto3"><span id="projeto3Details">Ver mais</span> <i class="bi bi-box-arrow-in-up-right"></i></a>
+
+                    <div class="modal fade" id="projeto3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel3">Projeto - Site HCP Gestão</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="d-flex">
+                                        <div class="m-auto">
+
+                                            <div class="card p-2">
+                                                <h3 id="detailedDescription3">Descrição Detalhada:</h3>
+                                                <p class="text-start"><b id="detailedDescription3Text">Este projeto consiste em uma página web dedicada às unidades HCP Gestão.</b></p>
+                                                <h4 class="text-start mt-4" id="mainTech3">Principais Tecnologias:</h4>
+                                                <table class="table border">
+                                                    <tr>
+                                                        <td colspan="4">Laravel Framework</td>
+                                                        <td><img src="storage/icons/laravel.png" alt="Laravel Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">Bootstrap Framework</td>
+                                                        <td><img src="storage/icons/bootstrap.png" alt="Bootstrap Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">PHP</td>
+                                                        <td><img src="storage/icons/php.png" alt="PHP Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">JavaScript</td>
+                                                        <td><img src="storage/icons/js.png" alt="JavaScript Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+                                                </table>
+                                                <h4 class="text-start mt-4" id="auxDev3">Neste Projeto auxiliei no desenvolvimento:</h4>
+                                                <p class="text-start"><b id="p1m3">1 - Atualização de código para versão PHP mais recentes.</b></p>
+                                                <p class="text-start"><b id="p2m3">2 - Alteração de Layouts e Estilização de Páginas.</b></p>
+                                            </div>
+                                            <a href="https://hcpgestao.org.br/" target="_blank" class="btn btn-secondary mt-4 text-white"><span id="visitMyLinks3">Visitar</span> <i class="bi bi-box-arrow-in-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="storage/projects/all-my-links.png" alt="Projeto 4">
+                    <h3>All My Links</h3>
+                    <p id="descriptionAllMyLinks">Página Web onde Contém todos os links das minhas midias sociais.</p>
+                    <a href="" data-bs-toggle="modal" id="modalCredits" data-bs-target="#projeto4"><span id="projeto4Details">Ver mais</span> <i class="bi bi-box-arrow-in-up-right"></i></a>
+
+                    <div class="modal fade" id="projeto4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel4">Projeto - All My Links</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="d-flex">
+                                        <div class="m-auto" style="width: 100%;">
+
+                                            <div class="card p-2">
+                                                <h3 id="detailedDescription4">Descrição Detalhada:</h3>
+                                                <p class="text-start"><b id="detailedDescription4Text">Página Web onde Contém todos os links das minhas midias sociais.</b></p>
+                                                <h4 class="text-start mt-4" id="mainTech4">Principais Tecnologias:</h4>
+                                                <table class="table border">
+                                                    <tr>
+                                                        <td colspan="4">HTML</td>
+                                                        <td><img src="storage/icons/html-5.png" alt="HTML Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">CSS</td>
+                                                        <td><img src="storage/icons/css-3.png" alt="CSS Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">Bootstrap Framework</td>
+                                                        <td><img src="storage/icons/bootstrap.png" alt="Bootstrap Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4">JavaScript</td>
+                                                        <td><img src="storage/icons/js.png" alt="JavaScript Icon" style="height: 40px;width: 40px;"></td>
+                                                    </tr>
+                                                </table>
+                                                <div class="d-flex m-auto">
+                                                    <a href="https://github.com/LucasFigueiredoDEV/AllMyLinks" target="_blank" class="btn btn-secondary mt-4 mr-2 text-white"><span id="codeMyLinks">Código</span> <i class="bi bi-github"></i></a>
+                                                    <a href="https://lucasfigueiredodev.github.io/AllMyLinks/" target="_blank" class="btn btn-secondary mt-4 ms-2 text-white"><span id="visitMyLinks">Visitar</span> <i class="bi bi-box-arrow-in-up-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 id="contactTitle">Contato</h2>
+        <div class="row">
+            <div class="col mb-2 p-4">
+                <p class="text-center" id="contactText" style="font-weight: bold; font-size: 20px;">Estou interessado em uma oportunidade como Desenvolvedor full stack, no entanto, se você tiver outra solicitação ou pergunta não hesite em me contatar.</p>
+            </div>
+            <div class="col">
+                <div class="card text-start p-3">
+                    <div class="row">
+                        <a href="mailto:lucassamuel.profissional@gmai.com" style="text-decoration: none;" target="_blank"><img src="storage/icons/email.png" alt="Gmail Icon" style="width: 50px; height: 50px; margin-right: 10px;"><b>Lucassamuel.profissional@gmail.com</b></a>
+                    </div>
+                    <div class="row">
+                        <a href="https://discord.com/users/333462800989028352" target="_blank" style="text-decoration: none;"><img src="storage/icons/discord.png" alt="Discord Icon" style="width: 50px; height: 50px; margin-right: 10px;"><b>sr.lulucas</b></a>
+                    </div>
+                    <div class="row">
+                        <a href="https://www.linkedin.com/in/lucas-figueiredo-aab260264/" target="_blank" style="text-decoration: none;"><img src="storage/icons/linkedin.png" alt="Linkedin Icon" style="width: 50px; height: 50px; margin-right: 10px;"><b>Lucas Figueiredo</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="copyRight">2024 LucasFigueiredoDEV. Todos os direitos reservados.</span></p>
+        <a href="" data-bs-toggle="modal" id="modalCredits" data-bs-target="#creditos" id="creditsModal"><span id="creditsAnchor">Créditos</span></a>
+    </footer>
+
+    <div class="modal fade" id="creditos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Creditos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                        <li><a href="https://iconscout.com/icons/django" class="text-underline font-size-sm" target="_blank">Django</a> by <a href="https://iconscout.com/contributors/icon-mafia" class="text-underline font-size-sm">Icon Mafia</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/css" title="css icons">Css icons created by Pixel perfect - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/bootstrap" title="bootstrap icons">Bootstrap icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/nodejs" title="nodejs icons">Nodejs icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/python" title="python icons">Python icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/php" title="php icons">Php icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/mysql" title="mysql icons">Mysql icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/react" title="react icons">React icons created by srip - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/gmail" title="gmail icons">Gmail icons created by Pixel perfect - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/discord" title="discord icons">Discord icons created by Hight Quality Icons - Flaticon</a></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Função que gera um valor RGB aleatório
+        function getRandomColor() {
+          const r = Math.floor(Math.random() * 256); // Red
+          const g = Math.floor(Math.random() * 256); // Green
+          const b = Math.floor(Math.random() * 256); // Blue
+          return `rgb(${r}, ${g}, ${b})`;
+        }
+    
+        // Função que muda a cor do símbolo em loop infinito
+        function changeColorInLoop() {
+          const symbol = document.getElementById('codeSymbol');
+          const symbol2 = document.getElementById('codeSymbol2');
+          
+          // A cada 500ms (0.5s) muda a cor
+          setInterval(function() {
+            symbol.style.color = getRandomColor();  // Aplica a cor aleatória
+            symbol2.style.color = getRandomColor();  // Aplica a cor aleatória
+          }, 800); // A cada 500 milissegundos
+        }
+    
+        // Inicia a função de mudança de cor quando a página carregar
+        window.onload = changeColorInLoop;
+      </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+:root {
+    background-color: #101221;
+}
+
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
+.app-layout {
+    margin-left: var(--sidebar-width);
+}
+
+.main-content {
+    margin-top: 40px;
+    padding: 24px;
+    background-color: #101221;
+}
+
+.footer {
+    text-align: center;
+    background-color: #101221;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    bottom: 0px;
+    margin: auto;
+    padding: 20px;
+}

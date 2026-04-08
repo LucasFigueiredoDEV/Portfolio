@@ -1,33 +1,54 @@
-.about-me {
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    background-color: #1f223b;
-    color: white;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+.about {
+  background: var(--about-bg-gradient);
+  backdrop-filter: blur(2px);
+  color: var(--text-primary); 
+  margin-top: 20px;
+  padding: 60px 40px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
 @media screen and (min-width: 1440px) {
-    .about-me {
-        max-width: 80%;
+    .about {
+      max-width: 80%;
+      margin: auto;
     }
 }
 
-.about-me-img img{
-    max-width: 350px;
-    max-height: 400px;
+.about-img img {
+  width: 100%;
+  max-width: 340px;
+  height: 300px;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  filter: var(--about-img-filter, contrast(1.05) brightness(1.02));
+  transition: filter 0.3s ease;
 }
 
-.title-about-me {
-    text-align: center;
-    margin-bottom: 20px;
+.about-tag {
+  color: var(--accent-green, #22c55e);
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-.text-about-me {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-    padding: 0px 30px;
+.about-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 10px 0 20px;
+  color: var(--text-primary);
+}
+
+.about-text {
+  color: var(--about-text-secondary, #cbd5f5);
+  font-size: 0.95rem;
+}
+
+.about-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.about-buttons .btn {
+  border-radius: 8px;
 }

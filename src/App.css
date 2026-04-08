@@ -1,29 +1,158 @@
+/* ===== VARIÁVEIS DO TEMA ESCURO (PADRÃO) ===== */
 :root {
-    background-color: #101221;
+
+    --bg-primary: #101221;
+    --bg-secondary: #0a0c17;
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --accent-cyan: #38bdf8;
+    
+    --grid-color: rgba(56, 189, 248, 0.05);
+    
+    --sidebar-width: 260px;
+    --sidebar-bg: #0f1720;
+    --sidebar-fg: #e6eef8;
+
+    --about-bg-gradient: radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.95));
+    --about-text-secondary: #cbd5f5;
+    --accent-green: #22c55e;
+
+    --journey-bg: radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.95));
+    --journey-text: white;
+    --journey-border: white;
+    --journey-bullet-past: #ef4444;
+    --journey-bullet-current: #22c55e;
+    --journey-bullet-shadow: rgba(255, 255, 255, 0.2);
+    --journey-title-gradient: linear-gradient(135deg, #c084fc, #38bdf8);
+
+    --projects-bg: radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.95));
+    --title-gradient: linear-gradient(135deg, #c084fc, #38bdf8);
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --card-border: rgba(56, 189, 248, 0.2);
+    --card-border-hover: rgba(56, 189, 248, 0.6);
+    --card-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+    --card-shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(56, 189, 248, 0.3);
+    --card-title-gradient: linear-gradient(120deg, #e2e8f0, #94a3b8);
+    --card-text: #cbd5e1;
+    --badge-bg: rgba(30, 41, 59, 0.8);
+    --badge-color: #a5f3fc;
+    --badge-border: rgba(56, 189, 248, 0.3);
+    --badge-hover-bg: #1e293b;
+    --badge-hover-color: #38bdf8;
+    --btn-outline-border: #334155;
+    --btn-outline-color: #94a3b8;
+    --btn-outline-hover-bg: #1e293b;
+    --btn-dark-bg: linear-gradient(95deg, #0f172a, #1e1b4b);
+    --btn-dark-color: #e2e8f0;
+    --btn-dark-hover-bg: linear-gradient(95deg, #1e293b, #2e1065);
+
+    --contact-text: #fff;
+    --contact-tag-color: #22c55e;
+    --contact-text-secondary: #cbd5f5;
+    --contact-avatar-border: #1e293b;
+    --contact-avatar-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    --contact-social-bg: #020617;
+    --contact-social-color: #fff;
+    --contact-social-hover-bg: #1e293b;
 }
 
+/* ===== TEMA CLARO ===== */
+body.light-theme {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --grid-color: rgba(8, 145, 178, 0.08);
+    --accent-cyan: #0891b2;
+    --sidebar-bg: #e2e8f0;
+    --sidebar-fg: #0f172a;
+
+    --about-bg-gradient: radial-gradient(circle at 10% 20%, #f1f5f9, #e2e8f0);
+    --about-text-secondary: #334155;
+    --accent-green: #15803d;
+
+    --journey-bg: radial-gradient(circle at 10% 20%, #f1f5f9, #e2e8f0);
+    --journey-text: #0f172a;
+    --journey-border: #94a3b8;
+    --journey-bullet-past: #dc2626;
+    --journey-bullet-current: #15803d;
+    --journey-bullet-shadow: rgba(0, 0, 0, 0.1);
+    --journey-title-gradient: linear-gradient(135deg, #7e22ce, #0891b2);
+
+
+    --projects-bg: radial-gradient(circle at 10% 20%, #f1f5f9, #e2e8f0);
+    --title-gradient: linear-gradient(135deg, #7e22ce, #0891b2);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(100, 116, 139, 0.2);
+    --card-border-hover: #0891b2;
+    --card-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+    --card-title-gradient: linear-gradient(120deg, #1e293b, #475569);
+    --card-text: #334155;
+    --badge-bg: #e2e8f0;
+    --badge-color: #0f172a;
+    --badge-border: #94a3b8;
+    --badge-hover-bg: #cbd5e1;
+    --badge-hover-color: #0891b2;
+    --btn-outline-border: #cbd5e1;
+    --btn-outline-color: #334155;
+    --btn-outline-hover-bg: #f1f5f9;
+    --btn-dark-bg: linear-gradient(95deg, #e2e8f0, #cbd5e1);
+    --btn-dark-color: #0f172a;
+    --btn-dark-hover-bg: linear-gradient(95deg, #cbd5e1, #94a3b8);
+
+    --contact-text: #0f172a;
+    --contact-tag-color: #15803d;
+    --contact-text-secondary: #334155;
+    --contact-avatar-border: #cbd5e1;
+    --contact-avatar-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --contact-social-bg: #e2e8f0;
+    --contact-social-color: #0f172a;
+    --contact-social-hover-bg: #cbd5e1;
+}
+
+
 html {
-    scroll-padding-top: 80px;
+    scroll-margin-top: 80px;
     scroll-behavior: smooth;
 }
 
 .app-layout {
     margin-left: var(--sidebar-width);
+    background-color: var(--bg-primary);
 }
 
 .main-content {
     margin-top: 40px;
     padding: 24px;
-    background-color: #101221;
+    background-color: var(--bg-primary);
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: var(--text-primary);
 }
 
 .footer {
     text-align: center;
-    background-color: #101221;
-    color: white;
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
     font-weight: 400;
     position: relative;
-    bottom: 0px;
+    bottom: 0;
     margin: auto;
     padding: 20px;
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+body, .app-layout, .main-content {
+    color: var(--text-primary);
 }

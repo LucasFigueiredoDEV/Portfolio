@@ -1,14 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
 import LanguageSelect from "../buttonLang/index.jsx";
 
-function Navbar() {
-  const [darkMode, setDarkMode] = useState(true);
+function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) {
+  const [activeLink, setActiveLink] = useState("about");
 
-  function handleChangeTheme(e) {
-    e.preventDefault();
-    setDarkMode((prev) => !prev);
-  }
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    if (sections.length === 0) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-80px 0px -50% 0px",
+      threshold: 0.3,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          setActiveLink(sectionId);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
 
   return (
     <div className="navbar-container">
@@ -20,11 +41,46 @@ function Navbar() {
 
           <div className="nav-options">
             <ul>
-              <li><a href="#about-me">About</a></li>
-              <li><a href="#capatibilities">Capatibilities</a></li>
-              <li><a href="#journey">Journey</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a
+                  href="#about"
+                  className={activeLink === "about" ? "active" : ""}
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#capabilities"
+                  className={activeLink === "capabilities" ? "active" : ""}
+                >
+                  Capabilities
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#journey"
+                  className={activeLink === "journey" ? "active" : ""}
+                >
+                  Journey
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  className={activeLink === "projects" ? "active" : ""}
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className={activeLink === "contact" ? "active" : ""}
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
 
             <div className="div-button-theme-mode">
@@ -41,7 +97,7 @@ function Navbar() {
                 )}
               </a>
             </div>
-            <LanguageSelect />
+            <LanguageSelect lang={defaultLang} handleChangeLang={handleChangeLang} />
           </div>
         </nav>
       </div>

@@ -1,0 +1,72 @@
+.contact {
+  color: var(--contact-text);
+  padding: 80px 0 40px;
+  transition: color 0.3s ease;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-avatar img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid var(--contact-avatar-border);
+  box-shadow: var(--contact-avatar-shadow);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-content {
+  max-width: 500px;
+}
+
+.contact-tag {
+  color: var(--contact-tag-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.contact-content h2 {
+  margin: 10px 0;
+  font-weight: 700;
+  color: var(--contact-text);
+}
+
+.contact-content p {
+  color: var(--contact-text-secondary);
+  font-size: 0.95rem;
+}
+
+.email {
+  color: var(--contact-tag-color);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.contact-socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.contact-socials a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--contact-social-bg);
+  border-radius: 10px;
+  color: var(--contact-social-color);
+  transition: 0.3s;
+}
+
+.contact-socials a:hover {
+  background: var(--contact-social-hover-bg);
+  transform: translateY(-3px);
+}

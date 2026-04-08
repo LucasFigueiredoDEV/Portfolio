@@ -1,24 +1,106 @@
 .projects {
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #1f223b;
-    color: white;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.projects-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    padding: 60px 20px;
+    border-radius: 40px;
+    background: var(--projects-bg);
+    backdrop-filter: blur(2px);
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
 }
 
 .title-projects {
-    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    background: var(--title-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 3rem !important;
+    letter-spacing: -0.5px;
 }
 
-@media screen and (min-width: 1440px) {
+.project-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--card-border);
+    border-radius: 28px;
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: var(--card-title-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--card-text);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.tech-badge {
+    background: var(--badge-bg);
+    color: var(--badge-color);
+    padding: 6px 12px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.75rem;
+    border: 1px solid var(--badge-border);
+    transition: 0.2s;
+}
+
+.tech-badge:hover {
+    background: var(--badge-hover-bg);
+    color: var(--badge-hover-color);
+    border-color: var(--badge-hover-color);
+    transform: scale(1.02);
+}
+
+.btn-outline-dark {
+    border: 1px solid var(--btn-outline-border);
+    color: var(--btn-outline-color);
+    background: transparent;
+    transition: 0.25s;
+}
+
+.btn-outline-dark:hover {
+    background: var(--btn-outline-hover-bg);
+    border-color: var(--badge-hover-color);
+    color: var(--badge-hover-color);
+}
+
+.btn-dark {
+    background: var(--btn-dark-bg);
+    border: none;
+    color: var(--btn-dark-color);
+    transition: 0.25s;
+}
+
+.btn-dark:hover {
+    background: var(--btn-dark-hover-bg);
+    color: white;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+#iconGithubProjects, #iconDemoProjects {
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+@media (min-width: 1440px) {
     .projects {
         max-width: 80%;
     }

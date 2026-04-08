@@ -1,12 +1,18 @@
 .navbar-container {
     position: fixed;
     top: 0;
-    background-color: #101221;
+    background-color: var(--bg-primary);
     left: var(--sidebar-width);
     width: calc(100% - var(--sidebar-width));
     z-index: 900;
+    transition: background-color 0.3s ease;
 }
 
+@media screen and (min-width: 1440px) {
+    .divNav {
+        margin-right: 5%;
+    }
+}
 
 .logo img {
     height: 80px;
@@ -24,7 +30,6 @@
     font-weight: bold;
 }
 
-/* empurra tudo para a direita */
 .nav-options {
     display: flex;
     align-items: center;
@@ -42,7 +47,7 @@
 
 .nav-options a {
     text-decoration: none;
-    color: white;
+    color: var(--text-primary);
     font-weight: 500;
     padding-bottom: 8px;
     position: relative;
@@ -57,14 +62,42 @@
     left: 0;
     width: 0;
     height: 3px;
-    background-color: #596ddb;
+    background-color: var(--accent-cyan);
     transition: width 0.4s ease;
 }
 
 .nav-options a:hover {
-    color: #596ddb;
+    color: var(--accent-cyan);
+}
+
+.nav-options a.active,
+.nav-options a.active::after {
+  color: var(--accent-cyan);
+}
+
+.nav-options a.active::after {
+  width: 100%;
 }
 
 .nav-options a:hover::after {
     width: 100%;
+}
+
+.theme-toggle-btn {
+    font-size: 1.3rem;
+    padding: 8px 12px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.05);
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+body.light-theme .theme-toggle-btn:hover {
+    background-color: rgba(8, 145, 178, 0.1);
 }

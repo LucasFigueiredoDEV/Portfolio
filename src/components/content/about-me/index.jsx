@@ -1,23 +1,69 @@
 import React from "react";
 import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
-function Aboutme() {
-    return (
-        <section className="about-me" id="about-me">
-            <div className="about-me-img">
-                <img src="img/home-portfolio.png" alt="img-about-me" />
+function Aboutme({ lang }) { 
+  
+  const translations = {
+    en: {
+      tag: "About me",
+      title: "Back-End Developer focused on performance and scalability",
+      text1: "I'm Lucas, a developer with experience in PHP and Laravel, focused on building robust APIs and well-structured systems. I enjoy solving complex problems and turning ideas into efficient solutions.",
+      text2: "Currently, I'm deepening my knowledge in architecture, best practices, and integrations, always seeking to evolve as a developer.",
+      btnProjects: "View projects",
+      btnContact: "Contact"
+    },
+    pt: {
+      tag: "Sobre mim",
+      title: "Desenvolvedor Back-End focado em performance e escalabilidade",
+      text1: "Sou o Lucas, desenvolvedor com experiência em PHP e Laravel, focado na construção de APIs robustas e sistemas bem estruturados. Gosto de resolver problemas complexos e transformar ideias em soluções eficientes.",
+      text2: "Atualmente venho aprofundando meus conhecimentos em arquitetura, boas práticas e integrações, sempre buscando evoluir como dev.",
+      btnProjects: "Ver projetos",
+      btnContact: "Contato"
+    }
+  };
+
+  const t = translations[lang] || translations.pt;
+
+  return (
+    <section className="about" id="about">
+      <div className="container">
+        <div className="row align-items-center">
+
+          <div className="col-md-5 text-center">
+            <div className="about-img">
+              <img src="/img/home-portfolio.png" alt="about" />
             </div>
-            <div className="about-me-inner">
-                <h2 className="title-about-me">About Me</h2>
-                <p className="text-about-me">
-                    Hello! I'm Lucas, a passionate developer with a love for creating innovative solutions. With experience in various programming languages and frameworks, I enjoy tackling challenging problems and continuously learning new technologies. When I'm not coding, I like to explore the world games and spend time with friends and family.
-                </p>
+          </div>
+
+          <div className="col-md-7">
+            <span className="about-tag">{t.tag}</span>
+
+            <h2 className="about-title">
+              {t.title}
+            </h2>
+
+            <p className="about-text">
+              {t.text1}
+            </p>
+
+            <p className="about-text">
+              {t.text2}
+            </p>
+
+            <div className="about-buttons">
+              <a href="#projects" className="btn btn-dark">
+                {t.btnProjects}
+              </a>
+              <a href="#contact" className="btn btn-outline-light">
+                {t.btnContact}
+              </a>
             </div>
-        </section>
-    );
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Aboutme;

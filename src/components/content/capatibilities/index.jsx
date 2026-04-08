@@ -1,58 +1,35 @@
 import React from "react";
 import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
-function Capatibilities() {
-    return (
-        <section className="capatibilities" id="capatibilities">
-            <div className="capatibilities-inner">
-                <h2 className="title-capatibilities">My Capatibilities</h2>
-                <div className="skill-list">
-                    <div className="skill-item">
-                        <span>HTML5</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>CSS3</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>PHP</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>JavaScript</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>React</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>Vue</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>Python</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>MySQL</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>Laravel</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>MySQL</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>Bootstrap</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>GIT</span>
-                    </div>
-                    <div className="skill-item">
-                        <span>NodeJS</span>
-                    </div>
+const skills = {
+  Backend: ["PHP", "Laravel", "Node.js"],
+  Frontend: ["JavaScript", "React", "Vue", "HTML5", "CSS3"],
+  Database: ["MySQL"],
+  "Tools & DevOps": ["Git", "Bootstrap"]
+};
+
+function Capabilities() {
+  return (
+    <section className="capabilities" id="capabilities">
+      <div className="capabilities-inner">
+        <h2 className="title-capabilities">My Capabilities</h2>
+
+        {Object.entries(skills).map(([category, items]) => (
+          <div key={category} className="skill-category">
+            <h3>{category}</h3>
+            <div className="skill-list">
+              {items.map((skill) => (
+                <div className="skill-item" key={skill}>
+                  <span>{skill}</span>
                 </div>
+              ))}
             </div>
-        </section>
-    );
+          </div>
+        ))}
+
+      </div>
+    </section>
+  );
 }
 
-export default Capatibilities;
+export default Capabilities;

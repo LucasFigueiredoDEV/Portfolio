@@ -10,14 +10,14 @@ function Contact({ lang }) {
       tag: "Contact",
       title: "Liked my work? Let's talk.",
       description: "I'm available for Back-End Developer opportunities. If you want to discuss projects, freelancing, or job openings, hit me up 👇",
-      email: "contato@email.com",  // ou mantenha fixo se for o mesmo
+      email: "contato@lulucasdev.com",  // ou mantenha fixo se for o mesmo
       avatarAlt: "avatar"
     },
     pt: {
       tag: "Contato",
       title: "Curtiu meu trabalho? Vamos conversar.",
       description: "Estou disponível para oportunidades como desenvolvedor Back-End. Se quiser trocar uma ideia sobre projetos, freelas ou vagas, me chama 👇",
-      email: "contato@email.com",
+      email: "contato@lulucasdev.com",
       avatarAlt: "avatar"
     }
   };
@@ -44,10 +44,10 @@ function Contact({ lang }) {
           </p>
 
           <div className="contact-socials">
-            <a href="#" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/lucas-figueiredo-aab260264/" target="_blank" rel="noreferrer">
               <i className="bi bi-linkedin"></i>
             </a>
-            <a href="#" target="_blank" rel="noreferrer">
+            <a href="https://github.com/LucasFigueiredoDEV" target="_blank" rel="noreferrer">
               <i className="bi bi-github"></i>
             </a>
           </div>

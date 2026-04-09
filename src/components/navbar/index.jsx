@@ -30,21 +30,6 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollBottom =
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 10;
-
-      if (scrollBottom) {
-        setActiveLink(["projects", "contact"]);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="navbar-container">
       <div className="divNav">

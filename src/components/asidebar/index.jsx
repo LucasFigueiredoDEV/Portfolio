@@ -15,15 +15,15 @@ function Asidebar() {
 				<nav className="aside-nav">
 					<ul>
 						<li>
-							<a href="#linkedin" className="btn btn-primary"><i class="bi bi-linkedin "></i></a>
+							<a href="https://www.linkedin.com/in/lucas-figueiredo-aab260264/" target="_blank" rel="noreferrer" className="btn btn-primary"><i class="bi bi-linkedin "></i></a>
 						</li>
 						<li>
-							<a href="#github" className="btn btn-secondary"><i class="bi bi-github"></i></a>
+							<a href="https://github.com/LucasFigueiredoDEV" className="btn btn-secondary" target="_blank" rel="noreferrer"><i class="bi bi-github"></i></a>
 						</li>
-						<li><a href="#discord" className="btn btn-primary"><i class="bi bi-discord"></i></a></li>
+						<li><a href="https://discord.com/users/333462800989028352" className="btn btn-primary" target="_blank" rel="noreferrer"><i class="bi bi-discord"></i></a></li>
 					</ul>
 				</nav>
-				<a href="#cv" className="btn btn-success">My Resume <i class="bi bi-box-arrow-up-right"></i></a>
+				<a href="#" className="btn btn-success" target="_blank" rel="noreferrer">My Resume <i class="bi bi-box-arrow-up-right"></i></a>
 			</div>
 		</aside>
 	);

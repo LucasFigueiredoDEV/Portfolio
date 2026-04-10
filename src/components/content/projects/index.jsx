@@ -123,7 +123,7 @@ function Projects({ lang }) {
                     ))}
                   </div>
 
-                  <div className={`d-flex gap-2 ${!project.github ? "justify-content-center" : ""}`}>
+                  <div className={`d-flex gap-2 ${!project.github ? "justify-content-left" : ""}`}>
                     {project.github && (
                       <a
                         href={project.github}

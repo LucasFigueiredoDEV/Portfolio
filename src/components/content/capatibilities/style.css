@@ -2,7 +2,6 @@
 
 .capabilities {
     padding: 20px 20px;
-    max-width: 80%;
     margin: auto;
     color: white;
 }
@@ -50,4 +49,10 @@
     transform: translateY(-2px);
     box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
     border-color: #38bdf8;
+}
+
+@media screen and (min-width: 2000px) {
+    .capabilities {
+      margin: auto 10%;
+    }
 }

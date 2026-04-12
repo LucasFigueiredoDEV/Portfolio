@@ -100,8 +100,108 @@
     font-size: 1rem;
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 2000px) {
     .projects {
-        max-width: 80%;
+      margin: auto 10%;
     }
+}
+
+/* ⚠️ Ajuste por causa da sidebar (260px) */
+@media (min-width: 993px) and (max-width: 1340px) {
+  .projects .col-lg-4 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects {
+    padding: 70px 40px;
+  }
+
+  .title-projects {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .projects {
+    padding: 50px 20px;
+    border-radius: 30px;
+  }
+
+  .title-projects {
+    font-size: 2rem;
+    margin-bottom: 2.5rem !important;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 15px;
+    margin: 30px 10px;
+    border-radius: 25px;
+  }
+
+  .title-projects {
+    font-size: 1.7rem;
+    margin-bottom: 2rem !important;
+  }
+
+  .project-card {
+    border-radius: 20px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  .tech-badge {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  #iconGithubProjects, 
+  #iconDemoProjects {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects {
+    padding: 30px 10px;
+    margin: 20px 5px;
+  }
+
+  .title-projects {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  /* 🔥 Botões ficam um embaixo do outro */
+  .project-card .d-flex {
+    flex-direction: column;
+  }
+
+  .project-card .btn {
+    width: 100% !important;
+  }
 }

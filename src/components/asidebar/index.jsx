@@ -28,15 +28,15 @@ function Asidebar({ lang }) {
 				<nav className="aside-nav">
 					<ul>
 						<li>
-							<a href="https://www.linkedin.com/in/lucas-figueiredo-aab260264/" target="_blank" rel="noreferrer" className="btn btn-primary"><i class="bi bi-linkedin "></i></a>
+							<a href="https://www.linkedin.com/in/lucas-figueiredo-aab260264/" target="_blank" rel="noreferrer" className="btn btn-primary"><i className="bi bi-linkedin "></i></a>
 						</li>
 						<li>
-							<a href="https://github.com/LucasFigueiredoDEV" className="btn btn-secondary" target="_blank" rel="noreferrer"><i class="bi bi-github"></i></a>
+							<a href="https://github.com/LucasFigueiredoDEV" className="btn btn-secondary" target="_blank" rel="noreferrer"><i className="bi bi-github"></i></a>
 						</li>
-						<li><a href="https://discord.com/users/333462800989028352" className="btn btn-primary" target="_blank" rel="noreferrer"><i class="bi bi-discord"></i></a></li>
+						<li><a href="https://discord.com/users/333462800989028352" className="btn btn-primary" target="_blank" rel="noreferrer"><i className="bi bi-discord"></i></a></li>
 					</ul>
 				</nav>
-				<a href="#" className="btn btn-success btnResume" target="_blank" rel="noreferrer">{t.resume} <i class="bi bi-box-arrow-up-right"></i></a>
+				<a href="#" className="btn btn-success btnResume" target="_blank" rel="noreferrer">{t.resume} <i className="bi bi-box-arrow-up-right"></i></a>
 			</div>
 		</aside>
 	);

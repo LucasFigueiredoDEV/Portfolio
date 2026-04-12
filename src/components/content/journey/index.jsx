@@ -13,7 +13,7 @@ function Journey({ lang }) {
       title: "Junior Developer",
       date: "September 2025",
       company: "VerdanaTech",
-      description: ""
+      description: "I work as a Full Stack Developer, with experience in building web, mobile, and desktop applications, delivering end-to-end solutions with a strong focus on performance, scalability, and user experience. On the back-end, I use PHP and Laravel to develop robust, secure, and well-structured APIs. On the front-end, I work with JavaScript and Bootstrap to create modern, responsive interfaces aligned with best usability practices. I also develop mobile applications using Ionic and desktop solutions with Electron, expanding product reach and ensuring consistency across multiple platforms. I have experience creating plugins, pages, and services, actively participating in the entire development lifecycle from requirements definition to final delivery always aiming to generate real business value and optimize processes. I am results-oriented, with a strong focus on clean code, best practices, and continuous improvement, contributing to the development of efficient and scalable systems."
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ function Journey({ lang }) {
       title: "Desenvolvedor Júnior",
       date: "Setembro 2025",
       company: "VerdanaTech",
-      description: ""
+      description: "Atuo como Desenvolvedor Full Stack, com experiência no desenvolvimento de aplicações web, mobile e desktop, entregando soluções completas com foco em performance, escalabilidade e experiência do usuário. No back-end, utilizo PHP e Laravel para construção de APIs robustas, seguras e bem estruturadas. No front-end, trabalho com JavaScript e Bootstrap, desenvolvendo interfaces modernas, responsivas e alinhadas às melhores práticas de usabilidade. Também desenvolvo aplicações mobile com Ionic e soluções desktop com Electron, ampliando a abrangência dos produtos e garantindo consistência entre diferentes plataformas. Tenho experiência na criação de plugins, páginas e serviços, participando de todo o ciclo de desenvolvimento desde a definição de requisitos até a entrega final sempre buscando gerar valor real para o negócio e otimizar processos. Sou orientado a resultados, com foco em código limpo, boas práticas e melhoria contínua, contribuindo para a construção de sistemas eficientes e escaláveis."
     },
     {
       id: 2,

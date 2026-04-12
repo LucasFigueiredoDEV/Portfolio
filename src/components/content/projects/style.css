@@ -10,7 +10,7 @@
 }
 
 .title-projects {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     font-weight: 700;
     background: var(--title-gradient);
     background-clip: text;
@@ -116,10 +116,6 @@
 @media (min-width: 1200px) {
   .projects {
     padding: 70px 40px;
-  }
-
-  .title-projects {
-    font-size: 2.6rem;
   }
 }
 

@@ -3,6 +3,25 @@ import "./style.css";
 import LanguageSelect from "../buttonLang/index.jsx";
 
 function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) {
+  const translations = {
+    en: {
+      about: "About",
+      capabilities: "Capabilities",
+      journey: "Journey",
+      projects: "Projects",
+      contact: "Contact"
+    },
+    pt: {
+      about: "Sobre",
+      capabilities: "Habilidades",
+      journey: "Jornada",
+      projects: "Projetos",
+      contact: "Contato"
+    }
+  };
+
+  const t = translations[defaultLang] || translations.pt;
+
   const [activeLink, setActiveLink] = useState("about");
 
   useEffect(() => {
@@ -35,7 +54,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
       <div className="divNav">
         <nav className="nav">
           <div className="logo">
-            <img src="" alt="logo" />
+            {/* <img src="" alt="logo" /> */}
           </div>
 
           <div className="nav-options">
@@ -45,7 +64,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
                   href="#about"
                   className={activeLink === "about" ? "active" : ""}
                 >
-                  About
+                  {t.about}
                 </a>
               </li>
               <li>
@@ -53,7 +72,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
                   href="#capabilities"
                   className={activeLink === "capabilities" ? "active" : ""}
                 >
-                  Capabilities
+                  {t.capabilities}
                 </a>
               </li>
               <li>
@@ -61,7 +80,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
                   href="#journey"
                   className={activeLink === "journey" ? "active" : ""}
                 >
-                  Journey
+                  {t.journey}
                 </a>
               </li>
               <li>
@@ -69,7 +88,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
                   href="#projects"
                   className={activeLink === "projects" ? "active" : ""}
                 >
-                  Projects
+                  {t.projects}
                 </a>
               </li>
               <li>
@@ -77,7 +96,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
                   href="#contact"
                   className={activeLink === "contact" ? "active" : ""}
                 >
-                  Contact
+                  {t.contact}
                 </a>
               </li>
             </ul>

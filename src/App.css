@@ -23,10 +23,10 @@
     --journey-bullet-past: #ef4444;
     --journey-bullet-current: #22c55e;
     --journey-bullet-shadow: rgba(255, 255, 255, 0.2);
-    --journey-title-gradient: linear-gradient(135deg, #c084fc, #38bdf8);
+    --journey-title-gradient: linear-gradient(135deg, #22c55e, #22c55e);
 
     --projects-bg: radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.95));
-    --title-gradient: linear-gradient(135deg, #c084fc, #38bdf8);
+    --title-gradient: linear-gradient(135deg, #22c55e, #22c55e);
     --card-bg: rgba(15, 23, 42, 0.7);
     --card-border: rgba(56, 189, 248, 0.2);
     --card-border-hover: rgba(56, 189, 248, 0.6);
@@ -56,6 +56,34 @@
     --contact-social-hover-bg: #1e293b;
 }
 
+body.light-theme .btn-primary {
+    background: var(--btn-dark-bg);
+    color: var(--btn-dark-color);
+    border: none;
+}
+
+body.light-theme .btn-primary:hover {
+    background: #94a3b8;
+    color: var(--btn-dark-hover-color);
+    border: none;
+}
+
+body.light-theme .img-dev img {
+    border: 2px solid var(--btn-dark-color);
+}
+
+body.light-theme .btn-secondary {
+    background: var(--btn-dark-bg);
+    color: var(--btn-dark-color);
+    border: none;
+}
+
+body.light-theme .btn-secondary:hover {
+    background: #94a3b8;
+    color: var(--btn-dark-hover-color);
+    border: none;
+}
+
 /* ===== TEMA CLARO MELHORADO ===== */
 body.light-theme {
     --bg-primary: #f1f5f9; /* levemente mais escuro */
@@ -73,11 +101,11 @@ body.light-theme {
     --sidebar-fg: #0b1220;
 
     /* ===== ABOUT ===== */
-    --about-bg-gradient: radial-gradient(circle at 10% 20%, #ffffff, #e2e8f0);
+    --about-bg-gradient: radial-gradient(circle at 10% 20%, #e2e8f0, #e2e8f0);
     --about-text-secondary: #475569;
 
     /* ===== JOURNEY ===== */
-    --journey-bg: radial-gradient(circle at 10% 20%, #ffffff, #e2e8f0);
+    --journey-bg: radial-gradient(circle at 10% 20%, #e2e8f0, #e2e8f0);
     --journey-text: #0b1220;
     --journey-border: #cbd5e1;
 
@@ -85,12 +113,12 @@ body.light-theme {
     --journey-bullet-current: #16a34a;
     --journey-bullet-shadow: rgba(0, 0, 0, 0.15);
 
-    --journey-title-gradient: linear-gradient(135deg, #6d28d9, #06b6d4);
+    --journey-title-gradient: linear-gradient(135deg, #16a34a, #16a34a);
 
     /* ===== PROJECTS ===== */
-    --projects-bg: radial-gradient(circle at 10% 20%, #ffffff, #e2e8f0);
+    --projects-bg: radial-gradient(circle at 10% 20%, #e2e8f0, #e2e8f0);
 
-    --title-gradient: linear-gradient(135deg, #6d28d9, #06b6d4);
+    --title-gradient: linear-gradient(135deg, #16a34a, #16a34a);
 
     --card-bg: rgba(255, 255, 255, 0.95); /* mais sólido */
     --card-border: rgba(100, 116, 139, 0.25);
@@ -115,9 +143,9 @@ body.light-theme {
     --btn-outline-color: #334155;
     --btn-outline-hover-bg: #e2e8f0;
 
-    --btn-dark-bg: linear-gradient(95deg, #e2e8f0, #cbd5e1);
+    --btn-dark-bg: linear-gradient(95deg, #abc6eb, #abc6eb);
     --btn-dark-color: #0f172a;
-    --btn-dark-hover-bg: linear-gradient(95deg, #cbd5e1, #94a3b8);
+    --btn-dark-hover-bg: linear-gradient(95deg, #94a3b8, #94a3b8);
 
     /* ===== CONTACT ===== */
     --contact-text: #0b1220;

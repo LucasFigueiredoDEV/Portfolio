@@ -59,11 +59,13 @@ function Journey({ lang }) {
   const translations = {
     en: {
       title: "Professional Journey",
-      loadMore: "Load More"
+      loadMore: "Load More",
+      company: "Company"
     },
     pt: {
       title: "Jornada Profissional",
-      loadMore: "Carregar Mais"
+      loadMore: "Carregar Mais",
+      company: "Empresa"
     }
   };
 
@@ -78,40 +80,41 @@ function Journey({ lang }) {
 
   return (
     <section className="journey" id="journey">
-      <div className="journey-img">
-        <img src="img/professional-journey.png" alt="img-journey" />
-      </div>
-
-      <div className="journey-inner">
-        <h2 className="title-journey">{t.title}</h2>
-
-        <div className="professional-journey-list">
-          {journeyItems.slice(0, visibleItems).map(item => (
-            <div
-              key={item.id}
-              className={
-                item.actual
-                  ? "professional-journey-item-actual"
-                  : "professional-journey-item"
-              }
-            >
-              <h4>
-                {item.title} - <span>{item.date}</span>
-              </h4>
-              <h6>Company: {item.company}</h6>
-              <p>{item.description}</p>
-            </div>
-          ))}
+      <div className="row">
+        <div className="col-12 col-lg-4 col-xl-4 col-xxl-4 col-md-12 text-center">
+          <div className="journey-img">
+            <img src="img/professional-journey.png" alt="img-journey" />
+          </div>
         </div>
-
-        {visibleItems < journeyItems.length && (
-          <button
-            className="btn btn-outline-light load-more-btn"
-            onClick={loadMore}
-          >
-            {t.loadMore}
-          </button>
-        )}
+        <div className="col-12 col-lg-8 col-xl-8 col-xxl-8 col-md-12 journey-inner">
+          <h2 className="title-journey">{t.title}</h2>
+          <div className="professional-journey-list">
+            {journeyItems.slice(0, visibleItems).map(item => (
+              <div
+                key={item.id}
+                className={
+                  item.actual
+                    ? "professional-journey-item-actual"
+                    : "professional-journey-item"
+                }
+              >
+                <h4>
+                  {item.title} - <span>{item.date}</span>
+                </h4>
+                <h6>{t.company}: {item.company}</h6>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
+          {visibleItems < journeyItems.length && (
+            <button
+              className="btn btn-outline-light load-more-btn"
+              onClick={loadMore}
+            >
+              {t.loadMore}
+            </button>
+          )}
+        </div>
       </div>
     </section>
   );

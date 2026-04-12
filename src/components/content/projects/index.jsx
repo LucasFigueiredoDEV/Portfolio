@@ -100,7 +100,7 @@ function Projects({ lang }) {
 
         <div className="row g-4">
           {projects.map((project, index) => (
-            <div className="col-md-4" key={index}>
+            <div className="col-lg-4 col-md-6" key={index}>
               <div className="card project-card h-100">
                 {index === 0 && (
                   <i

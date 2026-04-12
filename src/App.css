@@ -122,6 +122,12 @@ html {
     background-color: var(--bg-primary);
 }
 
+@media (max-width: 992px) {
+    .app-layout {
+        margin-left: 0;
+    }
+}
+
 .main-content {
     margin-top: 40px;
     padding: 24px;

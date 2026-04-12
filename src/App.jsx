@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="app-layout">
-      <Asidebar />
+      <Asidebar lang={lang} />
       <Navbar darkMode={darkMode} handleChangeTheme={handleChangeTheme} defaultLang={lang} handleChangeLang={handleChangeLang} />
       <main className="main-content">
         <Aboutme lang={lang} />

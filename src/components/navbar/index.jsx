@@ -11,14 +11,14 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
 
     const observerOptions = {
       root: null,
-      rootMargin: "-80px 0px -45% 0px",
+      rootMargin: "-80px 0px -0px 0px",
       threshold: 0.3,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveLink([entry.target.id]);
+          setActiveLink(entry.target.id);
         }
       });
     }, observerOptions);
@@ -43,7 +43,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
               <li>
                 <a
                   href="#about"
-                  className={activeLink.includes("about") ? "active" : ""}
+                  className={activeLink === "about" ? "active" : ""}
                 >
                   About
                 </a>
@@ -51,7 +51,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
               <li>
                 <a
                   href="#capabilities"
-                  className={activeLink.includes("capabilities") ? "active" : ""}
+                  className={activeLink === "capabilities" ? "active" : ""}
                 >
                   Capabilities
                 </a>
@@ -59,7 +59,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
               <li>
                 <a
                   href="#journey"
-                  className={activeLink.includes("journey") ? "active" : ""}
+                  className={activeLink === "journey" ? "active" : ""}
                 >
                   Journey
                 </a>
@@ -67,7 +67,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
               <li>
                 <a
                   href="#projects"
-                  className={activeLink.includes("projects") ? "active" : ""}
+                  className={activeLink === "projects" ? "active" : ""}
                 >
                   Projects
                 </a>
@@ -75,7 +75,7 @@ function Navbar({ darkMode, handleChangeTheme, defaultLang, handleChangeLang }) 
               <li>
                 <a
                   href="#contact"
-                  className={activeLink.includes("contact") ? "active" : ""}
+                  className={activeLink === "contact" ? "active" : ""}
                 >
                   Contact
                 </a>

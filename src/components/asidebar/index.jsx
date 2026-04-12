@@ -8,11 +8,13 @@ function Asidebar({ lang }) {
 	const translations = {
 		en: {
 			greetings: "Hi, I'm Lucas",
-			resume: "My Resume"
+			resume: "My Resume",
+			cv_path: "/files/CV - Lucas Figueiredo.pdf"
 		},
 		pt: {
 			greetings: "Olá, eu sou o Lucas",
-			resume: "Meu Currículo"
+			resume: "Meu Currículo",
+			cv_path: "/files/Curriculo - Lucas Figueiredo.pdf"
 		}
 	};
 
@@ -36,7 +38,7 @@ function Asidebar({ lang }) {
 						<li><a href="https://discord.com/users/333462800989028352" className="btn btn-primary" target="_blank" rel="noreferrer"><i className="bi bi-discord"></i></a></li>
 					</ul>
 				</nav>
-				<a href="#" className="btn btn-success btnResume" target="_blank" rel="noreferrer">{t.resume} <i className="bi bi-box-arrow-up-right"></i></a>
+				<a href={t.cv_path} className="btn btn-success btnResume" target="_blank" rel="noreferrer">{t.resume} <i className="bi bi-box-arrow-up-right"></i></a>
 			</div>
 		</aside>
 	);

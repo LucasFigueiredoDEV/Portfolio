@@ -56,59 +56,92 @@
     --contact-social-hover-bg: #1e293b;
 }
 
-/* ===== TEMA CLARO ===== */
+/* ===== TEMA CLARO MELHORADO ===== */
 body.light-theme {
-    --bg-primary: #f8fafc;
+    --bg-primary: #f1f5f9; /* levemente mais escuro */
     --bg-secondary: #e2e8f0;
-    --text-primary: #0f172a;
-    --text-secondary: #334155;
-    --grid-color: rgba(8, 145, 178, 0.08);
-    --accent-cyan: #0891b2;
-    --sidebar-bg: #e2e8f0;
-    --sidebar-fg: #0f172a;
 
-    --about-bg-gradient: radial-gradient(circle at 10% 20%, #f1f5f9, #e2e8f0);
-    --about-text-secondary: #334155;
-    --accent-green: #15803d;
+    --text-primary: #0b1220; /* mais forte */
+    --text-secondary: #475569;
 
-    --journey-bg: radial-gradient(circle at 10% 20%, #f1f5f9, #e2e8f0);
-    --journey-text: #0f172a;
-    --journey-border: #94a3b8;
+    --grid-color: rgba(8, 145, 178, 0.12);
+
+    --accent-cyan: #06b6d4; /* mais vibrante */
+    --accent-green: #16a34a;
+
+    --sidebar-bg: #dbe3ec; /* diferencia do bg */
+    --sidebar-fg: #0b1220;
+
+    /* ===== ABOUT ===== */
+    --about-bg-gradient: radial-gradient(circle at 10% 20%, #ffffff, #e2e8f0);
+    --about-text-secondary: #475569;
+
+    /* ===== JOURNEY ===== */
+    --journey-bg: radial-gradient(circle at 10% 20%, #ffffff, #e2e8f0);
+    --journey-text: #0b1220;
+    --journey-border: #cbd5e1;
+
     --journey-bullet-past: #dc2626;
-    --journey-bullet-current: #15803d;
-    --journey-bullet-shadow: rgba(0, 0, 0, 0.1);
-    --journey-title-gradient: linear-gradient(135deg, #7e22ce, #0891b2);
+    --journey-bullet-current: #16a34a;
+    --journey-bullet-shadow: rgba(0, 0, 0, 0.15);
 
+    --journey-title-gradient: linear-gradient(135deg, #6d28d9, #06b6d4);
 
-    --projects-bg: radial-gradient(circle at 10% 20%, #f1f5f9, #e2e8f0);
-    --title-gradient: linear-gradient(135deg, #7e22ce, #0891b2);
-    --card-bg: rgba(255, 255, 255, 0.85);
-    --card-border: rgba(100, 116, 139, 0.2);
-    --card-border-hover: #0891b2;
-    --card-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
-    --card-shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
-    --card-title-gradient: linear-gradient(120deg, #1e293b, #475569);
-    --card-text: #334155;
+    /* ===== PROJECTS ===== */
+    --projects-bg: radial-gradient(circle at 10% 20%, #ffffff, #e2e8f0);
+
+    --title-gradient: linear-gradient(135deg, #6d28d9, #06b6d4);
+
+    --card-bg: rgba(255, 255, 255, 0.95); /* mais sólido */
+    --card-border: rgba(100, 116, 139, 0.25);
+    --card-border-hover: #06b6d4;
+
+    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    --card-shadow-hover: 0 18px 30px rgba(0, 0, 0, 0.12);
+
+    --card-title-gradient: linear-gradient(120deg, #0f172a, #334155);
+    --card-text: #475569;
+
+    /* ===== BADGES ===== */
     --badge-bg: #e2e8f0;
     --badge-color: #0f172a;
-    --badge-border: #94a3b8;
+    --badge-border: #cbd5e1;
+
     --badge-hover-bg: #cbd5e1;
-    --badge-hover-color: #0891b2;
+    --badge-hover-color: #06b6d4;
+
+    /* ===== BUTTONS ===== */
     --btn-outline-border: #cbd5e1;
     --btn-outline-color: #334155;
-    --btn-outline-hover-bg: #f1f5f9;
+    --btn-outline-hover-bg: #e2e8f0;
+
     --btn-dark-bg: linear-gradient(95deg, #e2e8f0, #cbd5e1);
     --btn-dark-color: #0f172a;
     --btn-dark-hover-bg: linear-gradient(95deg, #cbd5e1, #94a3b8);
 
-    --contact-text: #0f172a;
-    --contact-tag-color: #15803d;
-    --contact-text-secondary: #334155;
+    /* ===== CONTACT ===== */
+    --contact-text: #0b1220;
+    --contact-tag-color: #16a34a;
+    --contact-text-secondary: #475569;
+
     --contact-avatar-border: #cbd5e1;
-    --contact-avatar-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --contact-avatar-shadow: 0 12px 30px rgba(0,0,0,0.12);
+
     --contact-social-bg: #e2e8f0;
     --contact-social-color: #0f172a;
     --contact-social-hover-bg: #cbd5e1;
+}
+
+
+body.light-theme .btn-outline-light {
+    border-color: #94a3b8;
+    color: #334155;
+}
+
+body.light-theme .btn-outline-light:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    border-color: #06b6d4;
 }
 
 

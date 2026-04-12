@@ -15,6 +15,10 @@
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+.btnResume {
+    font-weight: 500 !important;
+}
+
 
 @media (max-width: 992px) {
     .asidebar {

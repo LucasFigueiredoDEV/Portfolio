@@ -56,7 +56,7 @@ function App() {
       <Navbar darkMode={darkMode} handleChangeTheme={handleChangeTheme} defaultLang={lang} handleChangeLang={handleChangeLang} />
       <main className="main-content">
         <Aboutme lang={lang} />
-        <Capabilities />
+        <Capabilities lang={lang}/>
         <Journey lang={lang} />
         <Projects lang={lang} />
         <Contact lang={lang} />
